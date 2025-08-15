@@ -6,4 +6,4 @@ network
 scikit-learn
 networkx
 scipy
-PIL
+Pillow
