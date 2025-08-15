@@ -1,9 +1,9 @@
 streamlit
 pandas
 numpy
-lightgbm
-shap
 matplotlib
 network
 scikit-learn
 networkx
+scipy
+PIL

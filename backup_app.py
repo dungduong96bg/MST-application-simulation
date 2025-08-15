@@ -20,7 +20,7 @@ X = X_full[:, [f1, f2]]
 
 # ==== Sidebar: chọn số cụm k ====
 st.sidebar.header("Cấu hình MST & clustering")
-k_clusters = st.sidebar.slider("Chọn số cụm k", 2, 10, 3)
+k_clusters = st.sidebar.selectbox("Chọn số cụm k", [0,1,2,3,4,5,6,7,8,9,10])
 
 # ==== Build full MST ====
 G = nx.Graph()
@@ -49,7 +49,7 @@ fig, ax = plt.subplots(figsize=(8,6))
 pos = {i: X[i] for i in range(n_points)}
 
 # Vẽ toàn bộ MST (màu nhạt)
-nx.draw_networkx_edges(MST, pos, ax=ax, edge_color="lightgray", style="dashed")
+nx.draw_networkx_edges(MST, pos, ax=ax, edge_color="yellow", style="dashed")
 
 # Vẽ các cạnh MST sau khi cắt
 nx.draw_networkx_edges(G_cut, pos, ax=ax, edge_color="gray")
