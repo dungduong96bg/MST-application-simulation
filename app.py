@@ -43,7 +43,7 @@ if tab == "Clustering - agglomerative hierarchical clustering":
     # Sidebar config
     st.sidebar.subheader("Cấu hình Iris MST")
     f1 = st.sidebar.selectbox("Chiều X", range(X_full.shape[1]), format_func=lambda i: feature_names[i])
-    f2 = st.sidebar.selectbox("Chiều Y", ["Species"])
+    f2 = st.sidebar.selectbox("Chiều Y", range(X_full.shape[1]), index=1, format_func=lambda i: feature_names[i])
     X_plot = X_full[:, [f1, f2]]
 
     show_mst = st.sidebar.checkbox("Hiển thị MST", value=False)
