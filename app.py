@@ -138,7 +138,7 @@ elif tab == "Bài toán kết nối mạng thành phố":
     show_mst = st.sidebar.checkbox("Hiển thị MST", value=False)
 
     # --- Tạo dữ liệu ban đầu ---
-    np.random.seed(1102)
+    np.random.seed(11021996)
 
 
     def generate_positions(n, x_range, y_range, min_dist=15):
